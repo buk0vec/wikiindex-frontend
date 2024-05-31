@@ -16,7 +16,7 @@ export default function Page() {
           supabaseClient={supabase}
           appearance={{ theme: ThemeSupa }}
           providers={["github", "google"]}
-          redirectTo={"/auth/callback"}
+          redirectTo={env === "development" ? "http://localhost:3000/auth/callback" : "https://wikiindex.vercel.app/auth/callback"}
           onlyThirdPartyProviders={true}
         />
       </div>
