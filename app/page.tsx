@@ -7,6 +7,7 @@ export default function Home() {
       <h1 className="text-6xl font-extrabold font-serif">WikiIndex</h1>
       <p>A research demo to visualize how retrieval augmented generation (RAG) applications answer questions</p>
       <ButtonLink href="/dashboard">Get started</ButtonLink>
+      <p>Created by <a href="https://bukovec.dev" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80">Nick Bukovec</a></p>
     </main>
   );
 }
