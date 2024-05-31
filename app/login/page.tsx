@@ -5,7 +5,7 @@ import { ThemeMinimal, ThemeSupa } from "@supabase/auth-ui-shared";
 
 const supabase = createClient();
 
-const env = process.env.NODE_ENV
+const env = process.env.VERCEL_ENV
 
 export default function Page() {
   return (
