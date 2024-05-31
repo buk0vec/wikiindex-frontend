@@ -3,7 +3,7 @@ import Chat from "@/components/chat";
 export default function Home() {
   return (
     <main className="min-h-screen max-w-[calc(100%-260px)] min-w-[calc(100%-260px)] bg-pine-glade-100">
-      <Chat title="Base Llama3" model="base-model"/>
+      <Chat title="Base Mistral-7b-instruct" model="base-model"/>
     </main>
   );
 }

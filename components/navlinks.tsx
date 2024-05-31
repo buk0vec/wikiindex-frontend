@@ -16,7 +16,7 @@ const supabase = createClient()
 
 const models = [
   {
-    name: "Base Llama3",
+    name: "Base Mistral",
     path: "/dashboard/base",
   },
   {
