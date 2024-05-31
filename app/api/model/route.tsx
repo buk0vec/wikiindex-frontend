@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
   let writer = responseStream.writable.getWriter();
 
   const eventSource = new EventSource(
-    `${process.env.NEXT_PUBLIC_API_BASE}/${model}?query=${query}`
+    `${process.env.API_BASE}/${model}?query=${query}`
   );
 
   // @ts-expect-error

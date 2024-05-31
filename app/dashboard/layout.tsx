@@ -13,7 +13,7 @@ export default async function Layout({ children }: Readonly<{
   }
   return (
     <div className="relative z-0 flex h-full w-full overflow-hidden">
-      <div className="overflow-x-hidden w-[260px] bg-pine-glade-400 px-2">
+      <div className="overflow-x-hidden w-[260px] bg-zambezi-200 px-2">
         <a href="/" className="text-3xl font-bold tracking-tight pt-4 pb-4 font-serif inline-block">WikiIndex</a>
         <NavLinks />
       </div>

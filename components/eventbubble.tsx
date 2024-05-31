@@ -13,19 +13,19 @@ export default function EventBubble({ response }: { response: SSE }) {
   const [open, setOpen] = useState(response.type === "client-response");
   const color = useMemo(() => {
     if (response.type === "mistral-response") {
-      return "bg-blue-200";
+      return "bg-yellow-200";
     }
     if (response.type === "client-response") {
       return "bg-green-200";
     }
     if (response.type === "colbert-response") {
-      return "bg-yellow-200";
+      return "bg-purple-200";
     }
     if (response.type === "colbert-request") {
-      return "bg-red-200";
+      return "bg-purple-200";
     }
     if (response.type === "mistral-query") {
-      return "bg-gray-200";
+      return "bg-yellow-200";
     }
     return "bg-gray-200";
   }, [response.type]);
