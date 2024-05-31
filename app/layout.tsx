@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { ViewTransitions } from "next-view-transitions";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+const serif = Noto_Serif_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" className={`${serif.variable} ${inter.variable}`}>
+        <body className={`font-sans`}> {children}</body>
+      </html>
+    </ViewTransitions>
   );
 }
