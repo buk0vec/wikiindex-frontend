@@ -54,7 +54,7 @@ export default function EventBubble({ response }: { response: SSE }) {
       return "Mistral";
     }
     if (response.type === "client-response") {
-      return "Client";
+      return "Server";
     }
     if (response.type === "colbert-response") {
       return "ColBERT";
@@ -73,7 +73,7 @@ export default function EventBubble({ response }: { response: SSE }) {
       return "Server";
     }
     if (response.type === "client-response") {
-      return "Server";
+      return "Client";
     }
     if (response.type === "colbert-response") {
       return "Server";
